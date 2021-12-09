@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/whether_backgroun"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/statusTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clear Sky"
+        android:textSize="18sp"
+        android:textColor="@color/light_gray"
+        android:textAlignment="center"
+        android:layout_marginTop="70dp"
+        />
+
+    <TextView
+        android:id="@+id/temprTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="serif"
+        android:text="16°C"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"
+        android:textSize="80sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <TextView
+            android:id="@+id/tempMinTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="54.9"
+            android:textAlignment="center"
+            android:textColor="@color/light_gray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tempMaxTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="20.7"
+            android:textAlignment="center"
+            android:textColor="@color/light_gray"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/zipCodeBtn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/roundedbutton"
+        android:text="#"
+        android:layout_marginTop="150dp"
+        android:textColor="@color/pink"
+        android:layout_marginRight="50dp"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/cityTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:text="Makkah, SA"
+        android:textAlignment="center"
+        android:textColor="@color/whether_purple"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dateTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Uptadted at: 24/09/2021  10:09 AM"
+        android:textSize="13sp"
+        android:textColor="@color/pink"
+        android:textAlignment="center"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        app:columnCount="3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_row="0"
+            app:layout_column="0"
+            android:layout_margin="10dp"
+            android:layout_marginRight="40dp"
+            >
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sunrise_icon"
+                />
+
+            <TextView
+                android:id="@+id/sunrise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:text="Sunrise"
+                android:textAlignment="center"
+                android:textColor="@color/pink"
+                android:textSize="10sp"
+                />
+            <TextView
+                android:id="@+id/sunriseTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="50:30 am"
+                android:textSize="10sp"
+                android:textColor="@color/whether_purple"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_row="0"
+            app:layout_column="1"
+            android:layout_margin="10dp"
+            android:layout_marginRight="40dp"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/humadity_icon"
+                />
+            <TextView
+                android:id="@+id/humaditv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Humidity"
+                android:textSize="10sp"
+                android:textColor="@color/pink"
+                android:textAlignment="center"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/humidityTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="50:30 am"
+                android:textSize="10sp"
+                android:textColor="@color/whether_purple"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_row="0"
+            app:layout_column="2"
+            android:layout_margin="10dp"
+            android:layout_marginRight="40dp"
+            >
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sunset_icon"
+                />
+            <TextView
+                android:id="@+id/sunset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sunset"
+                android:textSize="10sp"
+                android:textColor="@color/pink"
+                android:textAlignment="center"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/sunsetTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="50:30 am"
+                android:textSize="10sp"
+                android:textColor="@color/whether_purple"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_row="1"
+            app:layout_column="0"
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_margin="10dp"
+            android:layout_marginRight="40dp"
+            >
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/pressure_icon"
+                />
+            <TextView
+                android:id="@+id/pressure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pressure"
+                android:textSize="10sp"
+                android:textColor="@color/pink"
+                android:textAlignment="center"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/pressureTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="50:30 am"
+                android:textSize="10sp"
+                android:textColor="@color/whether_purple"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_row="1"
+            app:layout_column="1"
+            android:layout_margin="10dp"
+            android:layout_marginRight="40dp"
+            >
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/wind_icon"
+                />
+            <TextView
+                android:id="@+id/wind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wind"
+                android:textSize="10sp"
+                android:textColor="@color/pink"
+                android:textAlignment="center"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/windtTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="50:30 am"
+                android:textSize="10sp"
+                android:textColor="@color/whether_purple"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_row="1"
+            app:layout_column="2"
+            android:layout_margin="10dp"
+            android:layout_marginRight="40dp"
+            >
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:src="@drawable/refresh_icon"
+                />
+            <TextView
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Refresh"
+                android:textSize="10sp"
+                android:textColor="@color/pink"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:id="@+id/refreshTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Data"
+                android:textSize="10sp"
+                android:textColor="@color/whether_purple"
+                android:textAlignment="center"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+
+</LinearLayout>
